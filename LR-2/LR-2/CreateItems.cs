@@ -2,18 +2,6 @@
 
 public class CreateItems
 {
-	public CreateItems()
-	{
-        struct Item
-        {
-        public string Name;
-        public int Price;
-        public int Stock;
-        public string Unit;
-        public int Ordered;
-        }
-    }
-
     static Item[] CreateItems()
     {
     string[] names = { "роза", "тюльпан", "хризантема", "орхидея", "гипсофила" };
