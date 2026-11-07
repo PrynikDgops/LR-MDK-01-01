@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,8 +27,25 @@ namespace Наследование
             laptop1.Set("Aser", 50000, 15);
             Laptop laptop2 = new Laptop();
             laptop2.Set("MacBook", 150000, 3);
+            products.Add(laptop0);
+            products.Add(laptop1);
+            products.Add(laptop2);
 
-            
+            foreach (Product product in products)
+            {
+                Console.Write($"Название: {product.GetName()}, ");
+                Console.Write($"цена: {product.GetPrice()}, ");
+                Console.Write($"продано: { product.GetSaledItem()}, ");
+
+                double amount = product.GetPrice() * product.GetSaledItem();
+                int discount = product.ColculateDiscount();
+                double amountWithDiscount = amount - (amount / 100 * discount);
+
+                Console.Write($"cумма: {amount}, ");
+                Console.Write($"скидка: {discount}%, ");
+                Console.WriteLine($"сумма с учетом скидки: {amountWithDiscount}");
+
+            }
         }
     }
 }

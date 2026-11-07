@@ -24,5 +24,17 @@ namespace Наследование
             price_ = price;
             saledItem_ = saledItem;
         }
+        public string GetName()
+        {
+            return name_;
+        }
+        public double GetPrice()
+        {
+            return price_;
+        }
+        public int GetSaledItem()
+        {
+            return saledItem_;
+        }
     }
 }
