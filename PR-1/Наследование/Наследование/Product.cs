@@ -11,5 +11,6 @@ namespace Наследование
         protected string name_;
         protected double price_;
         protected int saledItem_;
+        protected int defaultDiscount = 0;
     }
 }
