@@ -11,6 +11,18 @@ namespace Наследование
         protected string name_;
         protected double price_;
         protected int saledItem_;
-        protected int defaultDiscount = 0;
+        
+
+        public virtual int ColculateDiscount()
+        {
+            return 0;
+        }
+
+        public void Set(string name, double price, int saledItem)
+        {
+            name_ = name;
+            price_ = price;
+            saledItem_ = saledItem;
+        }
     }
 }

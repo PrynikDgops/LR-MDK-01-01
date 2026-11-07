@@ -8,7 +8,7 @@ namespace Наследование
 {
     internal class Laptop : Product
     {
-        public int ColculateDiscount()
+        public override int ColculateDiscount()
         {
 
             if (saledItem_ >= 5 && saledItem_ <= 10)
@@ -21,7 +21,7 @@ namespace Наследование
             }
             else
             {
-                return defaultDiscount;
+                return base.ColculateDiscount();
             }
         }
     }
